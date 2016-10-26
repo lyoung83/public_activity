@@ -1,9 +1,9 @@
-require 'rails/generators/active_record'
+require 'sequel/core'
 
 module PublicActivity
   module Generators
     # Migration generator that creates migration file from template
-    class MigrationGenerator < ActiveRecord::Generators::Base
+    class MigrationGenerator < Sequel::Database
       source_root File.expand_path("../templates", __FILE__)
 
       argument :name, :type => :string, :default => 'create_activities'

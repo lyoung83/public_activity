@@ -1,6 +1,9 @@
 module PublicActivity
   module ORM
-    module Mongoid
+    # Support for Sequel for PublicActivity.
+    module Sequel
+      # Provides Sequel specific, database-related routines for use by
+      # PublicActivity.
       class Adapter
         # Creates the activity on `trackable` with `options`
         def self.create_activity(trackable, options)
